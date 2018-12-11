@@ -1,0 +1,74 @@
+ActiveTick Feed Java API SDK
+---------------------------------------------
+Updated: Oct. 02, 2013
+
+
+Usage Instructions for ActiveTick Java Market API SDK (Eclipse):
+---------------------------------------------
+	1. Copy(extract) the following files to your project folder:
+		gnu-crypto.jar
+		javax-crypto.jar
+		javax-security.jar
+		atapi.jar
+		
+	2. Add the above mentioned .jars to to your project using the Build Path wizard 
+	   and choosing "Add External Jars" under the Libraries tab.
+	   
+	3. When testing from command line, make sure the above mentioned files exist in the same folder.
+
+
+Installation Instructions for Example Project:
+---------------------------------------------
+	1. Open eample.jar in winrar or another unzip tool.
+
+	2. Make sure the following files are in your local folder:
+		gnu-crypto.jar
+		javax-crypto.jar
+		javax-security.jar
+		atapi.jar
+
+	3. To run the sample you can try the following command.
+		java -jar example.jar
+
+	4. To login to ActiveTick server use the following command:
+		init activetick1.activetick.com  443 {your activetick provided key} {username} {password}
+			
+
+The following are a few sample commands on retrieving market data using the sample application
+---------------------------------------------
+Note! You can always use the "?" command to see instructions for the sample application.
+
+	1. To pull a basic quote for AAPL use:
+		getQuoteDb AAPL
+
+	2. To subscribe/unsubscribe to quote stream for AAPL use:
+		subscribeQuoteStream AAPL
+		unsubscribeQuoteStream AAPL
+		
+	3. To get Intraday history bars 5 Minute compression for AAPL use:
+		getIntradayHistoryBars AAPL 5 20101103130000 20101104130500
+	
+	4. To get 100 daily bars history bars for AAPL starting from a specific date going forward use:
+		getDailyHistoryBars AAPL 20100601100000 100 1
+	
+	5. To get a market movers record for NetGainers for NasdaqOmx use:
+		getMarketMovers NG Q
+	
+	6. To subscribe/unsubscribe to market movers for NetGainers for NasdaqOmx use:
+		subscribeMarketMovers NG Q
+		unsubscribeMarketMovers NG Q
+	7. To exit use:
+		quit
+		
+
+Documentation
+---------------------------------------------
+
+	1. JavaDoc Reference documentation is available in HTML format.
+
+
+For any questions please contact ActiveTick support at: support@activetick.com
+
+Happy coding!
+ActiveTick Support
+		
